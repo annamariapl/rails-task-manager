@@ -1,0 +1,23 @@
+<div class="container">
+	<h3> Title: </h3> <p><%= @task.title %> <p>
+		<h3> Description: </h3> <p><%= @task.details %> </p>
+
+		<% if @task.completed %>
+		<%= image_tag("done.gif") %> <!-- :size => '260x180' -->
+		<% else %>
+		<h3 class="done"> <%= "still needs to be done!" %> </h3>
+		<% end %>
+
+
+		<br>
+
+		<a href="/tasks">Go back</a>
+
+		<p>
+			<%= link_to "edit", edit_path(@task)  %> <!-- #it will know id thoufhr @task -->
+		</p>
+
+		<p>
+			<%= link_to "delete", task_path(@task), method: :delete %> 
+		</p>
+	</div>

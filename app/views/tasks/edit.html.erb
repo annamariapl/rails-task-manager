@@ -1,0 +1,17 @@
+<h2> This is how your task looks now</h2>
+
+<p> <%= @task.title %> </p>
+<p> <%= @task.details %> </p> 
+<br>
+
+<h2> Go and change if you wish </h2>
+<%= form_for @task do |f| %>
+<%= f.text_field :title %>
+<%= f.text_field :details %>
+<%= f.check_box :completed %>
+<%= f.submit "Update" %>
+<% end %>
+
+
+
+

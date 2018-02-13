@@ -1,0 +1,12 @@
+
+<%= form_for @task do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :details %>
+  <%= f.submit "Create" %>
+<% end %>
+
+<a href="/tasks">Go back</a>
+
+
+
+<!-- url: {action: "/tasks"}, html: {class: "form-blue"} options-->
